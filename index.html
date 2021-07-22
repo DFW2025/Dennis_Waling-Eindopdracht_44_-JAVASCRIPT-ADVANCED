@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>"DFW Movie Database"</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Sofia|Oswald|Dosis">
+    <script type="text/javascript" defer src="JS/script1.js"></script>
+    <script type="text/javascript" defer src="JS/script2.js"></script>
+</head>
+
+<body>
+    <div class="gridcontainer">
+        <!-- Header-->
+        <header class="header">
+            <nav>
+                <h1>DFW Movie Database</h1>
+                <ul id="moviefilters">
+                    <li><input type="radio" id="latestmovies" name="movie" value="latestmovies">
+                        <label class="latestmovies" for="latestmovies">Latest Movies</label><br>
+                    </li>
+                    <li><input type="radio" id="avengers" name="movie" value="avengers">
+                        <label class="avengers" for="avengers">Avengers</label><br>
+                    </li>
+                    <li><input type="radio" id="x-men" name="movie" value="x-men">
+                        <label class="x-men" for="x-men">X-Men</label>
+                    </li>
+                    <li><input type="radio" id="princess" name="movie" value="princess">
+                        <label class="princess" for="princess">Princess</label>
+                    </li>
+                    <li><input type="radio" id="batman" name="movie" value="batman">
+                        <label class="batman" for="batman">Batman</label>
+                    </li>
+                    <li><input type="radio" id="reset" name="movie" value="reset">
+                        <label class="reset" for="reset">Reset</label>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Main-->
+        <main class="main">
+            <!-- Gallery-->
+            <article id="moviegallery">
+                <ul id="movies" class="gridgallery">
+                </ul>
+            </article>
+            <!-- Socialbar-->
+            <article class="sidebar">
+                <ul class="sticky">
+                    <li class="im"><a href="https://www.imdb.com" class="imdb"><i class="fa fa-imdb"></i></a></li>
+                    <li class="mt"><a href="https://www.movietickets.com" class="ticket"><i
+                                class="fa fa-ticket"></i></a></li>
+                    <li class="yt"><a href="https://www.youtube.com" class="youtube"><i class="fa fa-youtube"></i></a>
+                    </li>
+                    <li class="dl"><a href="https://www.imdb.com/tv/" class="download"><i
+                                class="fa fa-cloud-download"></i></a></li>
+                </ul>
+            </article>
+        </main>
+        <!-- Footer-->
+        <footer class="footer">
+            <section class="copy">
+                <h6>
+                    Designed by
+                    <a href="#"> DFW</a>
+                </h6>
+            </section>
+        </footer>
+    </div>
+    <!-- Gridcontainer-->
+</body>
+
+</html>

@@ -1,0 +1,402 @@
+@import "./fonts";
+@import "./variables";
+
+/*  Mobile First */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+html,
+body {
+	background-color: black;
+	font-family: "Montserrat", sans-serif;
+}
+
+.gridcontainer {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 0.25fr;
+	grid-template-rows: 125px auto auto;
+	grid-template-areas: "h h h h" "m m m m" "f f f f";
+}
+
+
+/*  Header */
+
+.header {
+	grid-area: h;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #0f0f0f;
+	& h1 {
+		color: white;
+		font-size: 1em;
+		margin-top: 20px;
+		&::after {
+			background-color: $backgroundcolorpurple;
+			content: "NEW";
+			font-size: 0.4em;
+			padding-left: 10px;
+			display: block;
+			height: 10px;
+			width: 30px;
+			position: absolute;
+		}
+	}
+	& nav ul {
+		list-style-type: none;
+		font-size: 0.5em;
+		display: flex;
+		flex-flow: row wrap;
+		padding: 10px;
+		margin-top: 20px;
+		background-color: $backgroundcolorpurple
+	}
+	& nav ul li {
+		padding-left: 10px;
+		border-left: #68a7da solid 0.5px;
+		border-right: #68a7da solid 0.5px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+.latestmovies {
+	padding-right: 10px;
+	padding-left: 5px;
+	&:hover {
+		color: rgb(31, 30, 30);
+		background-color: $backgroundcolorlightgrey;
+		padding: $padding10px;
+	}
+}
+
+.avengers {
+	padding-right: 10px;
+	padding-left: 5px;
+	&:hover {
+		color: rgb(31, 30, 30);
+		background-color: $backgroundcolorlightgrey;
+		padding: $padding10px;
+	}
+}
+
+.x-men {
+	padding-right: 10px;
+	padding-left: 5px;
+	&:hover {
+		color: rgb(31, 30, 30);
+		background-color: $backgroundcolorlightgrey;
+		padding: $padding10px;
+	}
+}
+
+.princess {
+	padding-right: 10px;
+	padding-left: 5px;
+	&:hover {
+		color: rgb(31, 30, 30);
+		background-color: $backgroundcolorlightgrey;
+		padding: $padding10px;
+	}
+}
+
+.batman {
+	padding-right: 10px;
+	padding-left: 5px;
+	&:hover {
+		color: rgb(31, 30, 30);
+		background-color: $backgroundcolorlightgrey;
+		padding: $padding10px;
+	}
+}
+
+.reset {
+	padding-right: 10px;
+	padding-left: 5px;
+	font-style: italic;
+	color: #fffdfe;
+	font-weight: 800;
+	&:hover {
+		color: rgb(31, 30, 30);
+		background-color: $backgroundcolorlightgrey;
+		padding: $padding10px;
+	}
+}
+
+
+/*  Sidebar */
+
+.sidebar {
+	padding: 0px;
+	margin: 0px;
+	position: fixed;
+	right: -119px;
+	top: 150px;
+	width: 180px;
+}
+
+.sticky li {
+	list-style-type: none;
+	height: 60px;
+	padding: 0px;
+	transition: all 0.25s ease-in-out;
+	cursor: pointer;
+	&:hover {
+		margin-left: -170px;
+	}
+}
+
+.im {
+	background-color: #14161b;
+}
+
+.mt {
+	background-color: #ddda1f;
+}
+
+.yt {
+	background-color: #FF0000;
+}
+
+.dl {
+	background-color: #007bb6;
+}
+
+.fa-imdb {
+	padding-top: 12px;
+}
+
+.fa-ticket {
+	padding-top: 12px;
+}
+
+.fa-youtube {
+	padding-top: 12px;
+}
+
+.fa-cloud-download {
+	padding-top: 12px;
+}
+
+.imdb {
+	color: white;
+	font-size: 40px;
+	padding-left: 15px;
+	&:hover {
+		&::after {
+			content: "Search for movies";
+			font-size: 0.32em;
+			padding-left: 20px;
+			text-decoration: underline;
+			text-align: center;
+		}
+	}
+}
+
+.ticket {
+	color: white;
+	font-size: 40px;
+	padding-left: 15px;
+	&:hover {
+		&::after {
+			content: "Book a ticket";
+			font-size: 0.32em;
+			padding-left: 20px;
+			text-decoration: underline;
+			text-align: center;
+		}
+	}
+}
+
+.youtube {
+	color: white;
+	font-size: 40px;
+	padding-left: 15px;
+	&:hover {
+		&::after {
+			content: "Watch on youtube";
+			font-size: 0.32em;
+			padding-left: 20px;
+			text-decoration: underline;
+			text-align: center;
+		}
+	}
+}
+
+.download {
+	color: white;
+	font-size: 40px;
+	padding-left: 15px;
+	&:hover {
+		&::after {
+			content: "Download a movie";
+			font-size: 0.32em;
+			padding-left: 20px;
+			text-decoration: underline;
+			text-align: center;
+		}
+	}
+}
+
+
+/*  Main */
+
+.main {
+	grid-area: m;
+	background-color: $backgroundcolorlightgrey;
+	@include flexcenter (column wrap, center, center);
+	background: url(../Images/bg.png) top no-repeat;
+}
+
+
+/*  Moviegallery */
+
+.gridgallery {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 10px;
+	list-style-type: none;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	& h1 {
+		color: #cec0c0;
+		font-size: 1.1em;
+		padding-bottom: 5px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+
+
+/*  Mobile M */
+
+@media screen and (min-width:375px) {}
+
+
+/*  Mobile L */
+
+@media screen and (min-width:425px) {}
+
+
+/*  Tablet */
+
+@media screen and (min-width:768px) {
+	/*  Header */
+	.header {
+		grid-area: h;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #0f0f0f;
+		& h1 {
+			color: white;
+			font-size: 2.2em;
+			margin-bottom: 20px;
+			&::after {
+				background-color: $backgroundcolorpurple;
+				content: "NEW";
+				font-size: 0.4em;
+				padding-left: 10px;
+				display: block;
+				height: 18px;
+				width: 50px;
+				position: absolute;
+			}
+		}
+		& nav ul {
+			list-style-type: none;
+			font-size: 0.5em;
+			display: flex;
+			flex-flow: row wrap;
+			padding: 10px;
+			margin-bottom: 20px;
+			background-color: $backgroundcolorpurple
+		}
+		& nav ul li {
+			padding: 10px;
+			border-left: #68a7da solid 0.5px;
+			border-right: #68a7da solid 0.5px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+	/*  Main */
+	/*  Moviegallery */
+	.gridgallery {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+
+/*  Desktop */
+
+@media screen and (min-width:1024px) {
+	/*  Header */
+	.header {
+		grid-area: h;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #0f0f0f;
+		& h1 {
+			color: white;
+			font-size: 2.5em;
+			margin-bottom: 20px;
+			&::after {
+				background-color: $backgroundcolorpurple;
+				content: "NEW";
+				font-size: 0.4em;
+				padding-left: 10px;
+				display: block;
+				height: 18px;
+				width: 50px;
+				position: absolute;
+			}
+		}
+		& nav ul {
+			list-style-type: none;
+			font-size: 0.5em;
+			display: flex;
+			flex-flow: row wrap;
+			padding: 10px;
+			margin-bottom: 20px;
+			background-color: $backgroundcolorpurple
+		}
+		& nav ul li {
+			padding: 10px;
+			border-left: #68a7da solid 0.5px;
+			border-right: #68a7da solid 0.5px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+	/*  Moviegallery */
+	.gridgallery {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+
+/*  Footer */
+
+.footer {
+	grid-area: f;
+	background-color: $backgroundcolorpurple;
+	@include flexcenter (row wrap, flex-end, center);
+}
+
+.copy {
+	padding: 20px 30px 20px;
+	color: rgb(51, 48, 48);
+	& a {
+		color: #fffdfe;
+		font-weight: bold;
+		text-decoration: none;
+	}
+}

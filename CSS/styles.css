@@ -1,0 +1,529 @@
+@charset "UTF-8";
+/* Awesome Fonts */
+.icon::before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.icon-solid::before,
+.icon-regular::before,
+.icon-light::before {
+  font-family: "Font Awesome 5 Pro";
+}
+
+.icon-brand::before {
+  font-family: "Font Awesome 5 Brands";
+}
+
+.icon-solid::before {
+  font-weight: 900;
+}
+
+.icon-regular::before {
+  font-weight: 400;
+}
+
+.icon-light::before {
+  font-weight: 300;
+}
+
+.icon-brand::before {
+  font-weight: 400;
+}
+
+.icon-award::before {
+  content: "";
+}
+
+.icon-adobe::before {
+  content: "";
+}
+
+.icon-duotone {
+  position: relative;
+  padding-left: 1.25em;
+}
+
+.icon-duotone::before,
+.icon-duotone::after {
+  font-family: "Font Awesome 5 Duotone";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25em;
+  text-align: center;
+}
+
+.icon-duotone::before {
+  color: var(--fa-primary-color, inherit);
+  opacity: 1;
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.icon-duotone::after {
+  color: var(--fa-secondary-color, inherit);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.icon-duotone.icon-award::after {
+  content: "􏕙";
+}
+
+.icon-duotone.icon-award::before {
+  content: "";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -1rem;
+  padding: 3rem;
+  min-height: 100vh;
+  color: #343a40;
+}
+
+.example {
+  margin-bottom: 1rem;
+}
+
+.icon-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.icon {
+  margin: 0;
+  padding: 1.5rem 1rem;
+  font-size: 3em;
+  text-align: center;
+  color: #c3cfe2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.icon button {
+  font-size: 0.2em;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 0.5em 3em;
+  border: 0.16em solid #FFFFFF;
+  margin: 25px 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #535050;
+  text-align: center;
+  transition: all 0.15s;
+}
+.icon button:hover {
+  color: #5c4d44;
+  border-color: #332e2b;
+  transform: scale(1.2);
+}
+.icon button:active {
+  color: #BBBBBB;
+  border-color: #BBBBBB;
+}
+
+.icon::before {
+  margin-right: 0.5rem;
+}
+
+/* Variables */
+/*  Mobile First */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body {
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+}
+
+.gridcontainer {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.25fr;
+  grid-template-rows: 125px auto auto;
+  grid-template-areas: "h h h h" "m m m m" "f f f f";
+}
+
+/*  Header */
+.header {
+  grid-area: h;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f0f;
+}
+.header h1 {
+  color: white;
+  font-size: 1em;
+  margin-top: 20px;
+}
+.header h1::after {
+  background-color: #686de0;
+  content: "NEW";
+  font-size: 0.4em;
+  padding-left: 10px;
+  display: block;
+  height: 10px;
+  width: 30px;
+  position: absolute;
+}
+.header nav ul {
+  list-style-type: none;
+  font-size: 0.5em;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #686de0;
+}
+.header nav ul li {
+  padding-left: 10px;
+  border-left: #68a7da solid 0.5px;
+  border-right: #68a7da solid 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.latestmovies {
+  padding-right: 10px;
+  padding-left: 5px;
+}
+.latestmovies:hover {
+  color: #1f1e1e;
+  background-color: #c3cfe2;
+  padding: 0px 10px 0px 10px;
+}
+
+.avengers {
+  padding-right: 10px;
+  padding-left: 5px;
+}
+.avengers:hover {
+  color: #1f1e1e;
+  background-color: #c3cfe2;
+  padding: 0px 10px 0px 10px;
+}
+
+.x-men {
+  padding-right: 10px;
+  padding-left: 5px;
+}
+.x-men:hover {
+  color: #1f1e1e;
+  background-color: #c3cfe2;
+  padding: 0px 10px 0px 10px;
+}
+
+.princess {
+  padding-right: 10px;
+  padding-left: 5px;
+}
+.princess:hover {
+  color: #1f1e1e;
+  background-color: #c3cfe2;
+  padding: 0px 10px 0px 10px;
+}
+
+.batman {
+  padding-right: 10px;
+  padding-left: 5px;
+}
+.batman:hover {
+  color: #1f1e1e;
+  background-color: #c3cfe2;
+  padding: 0px 10px 0px 10px;
+}
+
+.reset {
+  padding-right: 10px;
+  padding-left: 5px;
+  font-style: italic;
+  color: #fffdfe;
+  font-weight: 800;
+}
+.reset:hover {
+  color: #1f1e1e;
+  background-color: #c3cfe2;
+  padding: 0px 10px 0px 10px;
+}
+
+/*  Sidebar */
+.sidebar {
+  padding: 0px;
+  margin: 0px;
+  position: fixed;
+  right: -119px;
+  top: 150px;
+  width: 180px;
+}
+
+.sticky li {
+  list-style-type: none;
+  height: 60px;
+  padding: 0px;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+.sticky li:hover {
+  margin-left: -170px;
+}
+
+.im {
+  background-color: #14161b;
+}
+
+.mt {
+  background-color: #ddda1f;
+}
+
+.yt {
+  background-color: #FF0000;
+}
+
+.dl {
+  background-color: #007bb6;
+}
+
+.fa-imdb {
+  padding-top: 12px;
+}
+
+.fa-ticket {
+  padding-top: 12px;
+}
+
+.fa-youtube {
+  padding-top: 12px;
+}
+
+.fa-cloud-download {
+  padding-top: 12px;
+}
+
+.imdb {
+  color: white;
+  font-size: 40px;
+  padding-left: 15px;
+}
+.imdb:hover::after {
+  content: "Search for movies";
+  font-size: 0.32em;
+  padding-left: 20px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.ticket {
+  color: white;
+  font-size: 40px;
+  padding-left: 15px;
+}
+.ticket:hover::after {
+  content: "Book a ticket";
+  font-size: 0.32em;
+  padding-left: 20px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.youtube {
+  color: white;
+  font-size: 40px;
+  padding-left: 15px;
+}
+.youtube:hover::after {
+  content: "Watch on youtube";
+  font-size: 0.32em;
+  padding-left: 20px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.download {
+  color: white;
+  font-size: 40px;
+  padding-left: 15px;
+}
+.download:hover::after {
+  content: "Download a movie";
+  font-size: 0.32em;
+  padding-left: 20px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+/*  Main */
+.main {
+  grid-area: m;
+  background-color: #c3cfe2;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  background: url(../Images/bg.png) top no-repeat;
+}
+
+/*  Moviegallery */
+.gridgallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  list-style-type: none;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.gridgallery h1 {
+  color: #cec0c0;
+  font-size: 1.1em;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*  Mobile M */
+/*  Mobile L */
+/*  Tablet */
+@media screen and (min-width: 768px) {
+  /*  Header */
+  .header {
+    grid-area: h;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f0f;
+  }
+  .header h1 {
+    color: white;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+  }
+  .header h1::after {
+    background-color: #686de0;
+    content: "NEW";
+    font-size: 0.4em;
+    padding-left: 10px;
+    display: block;
+    height: 18px;
+    width: 50px;
+    position: absolute;
+  }
+  .header nav ul {
+    list-style-type: none;
+    font-size: 0.5em;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #686de0;
+  }
+  .header nav ul li {
+    padding: 10px;
+    border-left: #68a7da solid 0.5px;
+    border-right: #68a7da solid 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  /*  Main */
+  /*  Moviegallery */
+  .gridgallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*  Desktop */
+@media screen and (min-width: 1024px) {
+  /*  Header */
+  .header {
+    grid-area: h;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f0f;
+  }
+  .header h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  .header h1::after {
+    background-color: #686de0;
+    content: "NEW";
+    font-size: 0.4em;
+    padding-left: 10px;
+    display: block;
+    height: 18px;
+    width: 50px;
+    position: absolute;
+  }
+  .header nav ul {
+    list-style-type: none;
+    font-size: 0.5em;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #686de0;
+  }
+  .header nav ul li {
+    padding: 10px;
+    border-left: #68a7da solid 0.5px;
+    border-right: #68a7da solid 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  /*  Moviegallery */
+  .gridgallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/*  Footer */
+.footer {
+  grid-area: f;
+  background-color: #686de0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+.copy {
+  padding: 20px 30px 20px;
+  color: #333030;
+}
+.copy a {
+  color: #fffdfe;
+  font-weight: bold;
+  text-decoration: none;
+}/*# sourceMappingURL=styles.css.map */
